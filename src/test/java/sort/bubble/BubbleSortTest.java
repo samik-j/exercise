@@ -1,4 +1,4 @@
-package bubbleSort;
+package sort.bubble;
 
 import org.junit.jupiter.api.Test;
 

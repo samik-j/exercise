@@ -1,4 +1,4 @@
-package linkList;
+package datastructures.linkList;
 
 public class LinkList<T> {
 

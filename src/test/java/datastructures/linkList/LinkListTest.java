@@ -1,4 +1,4 @@
-package linkList;
+package datastructures.linkList;
 
 import org.junit.jupiter.api.Test;
 
