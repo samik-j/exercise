@@ -35,31 +35,31 @@ public class Queue<T> {
         return queueArray[front];
     }
 
-    public boolean insert(T t) {
-        if(isFull()) {
+    public void insert(T t) {
+        if (isFull()) {
             throw new FullQueueException();
         }
 
-        if(++rear == maxSize) {
-            rear = 0;
+        if (rear == maxSize - 1) {
+            rear = -1;
         }
 
         ++nElements;
+        ++rear;
         queueArray[rear] = t;
-
-        return true;
     }
 
     public T remove() {
-        if(isEmpty()) {
+        if (isEmpty()) {
             throw new EmptyQueueException();
         }
 
         T temp = queueArray[front];
         queueArray[front] = null;
         --nElements;
+        ++front;
 
-        if(++front == maxSize) {
+        if (front == maxSize) {
             front = 0;
         }
 

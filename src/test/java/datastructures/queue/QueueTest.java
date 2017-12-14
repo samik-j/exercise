@@ -21,11 +21,11 @@ class QueueTest {
         Queue<String> queue = new Queue<>(String.class, 5);
 
         // when
-        boolean result = queue.insert("a");
+        queue.insert("a");
 
         // then
-        assertTrue(result);
         assertEquals(1, queue.size());
+        assertEquals("a", queue.peek());
     }
 
     @Test
@@ -37,10 +37,9 @@ class QueueTest {
         queue.remove();
 
         // when
-        boolean result = queue.insert("c");
+        queue.insert("c");
 
         // then
-        assertTrue(result);
         assertTrue(queue.isFull());
         assertEquals("b", queue.peek());
     }
